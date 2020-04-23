@@ -22,6 +22,6 @@ steps:
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'westeurope'
     templateLocation: 'Linked artifact'
-    csmFile: '$(agent.builddirectory)/azuredeploy.json'
-    csmParametersFile: '$(agent.builddirectory)/azuredeploy.parameters.json'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
