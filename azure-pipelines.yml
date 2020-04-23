@@ -1,0 +1,33 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MyConnection'
+    subscriptionId: 'b0a62e67-fe11-4a84-b57d-860652f00af3'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'RG-LogicApp-Demo-Test'
+    location: 'westeurope'
+    templateLocation: 'Linked artifact'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
