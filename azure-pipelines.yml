@@ -25,3 +25,9 @@ steps:
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
