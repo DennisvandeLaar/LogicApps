@@ -33,4 +33,4 @@ steps:
     Destination: 'AzureBlob'
     storage: 'dvdldeployment'
     ContainerName: 'logicapp'
-    AdditionalArgumentsForBlobCopy: '--tenant-id=72f988bf-86f1-41af-91ab-2d7cd011db47'
+    AdditionalArgumentsForBlobCopy: '--log-level=verbose'
