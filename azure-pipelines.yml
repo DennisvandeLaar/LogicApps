@@ -20,8 +20,8 @@ steps:
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'apiconnection.json'
-    csmParametersFileLink: 'apiconnection.parameters.json'
+    csmFile: 'apiconnection.json'
+    csmParametersFile: 'apiconnection.parameters.json'
     deploymentMode: 'Validation'
 
 - task: AzureResourceManagerTemplateDeployment@3
