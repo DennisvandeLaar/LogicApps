@@ -26,8 +26,10 @@ steps:
     csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
 
-- task: PublishBuildArtifacts@1
+- task: AzureFileCopy@4
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    SourcePath: '.'
+    azureSubscription: 'MyConnection'
+    Destination: 'AzureBlob'
+    storage: 'dvdldeployment'
+    ContainerName: 'logicapp'
