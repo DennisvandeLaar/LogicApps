@@ -10,8 +10,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
@@ -22,8 +20,8 @@ steps:
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://dvdldeployment.blob.core.windows.net/logicapp/apiconnection.json'
-    csmParametersFileLink: 'https://dvdldeployment.blob.core.windows.net/logicapp/apiconnection.parameters.json'
+    csmFile: 'apiconnection.json'
+    csmParametersFile: 'apiconnection.parameters.json'
     deploymentMode: 'Validation'
 
 - task: AzureResourceManagerTemplateDeployment@3
@@ -34,7 +32,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'westeurope'
-    templateLocation: 'Linked artifact'
+    templateLocation: 'URL of the file'
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Validation'
