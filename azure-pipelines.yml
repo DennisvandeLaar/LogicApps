@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - script: echo Hello, world!
@@ -24,10 +24,12 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
-    deploymentMode: 'Incremental'
+    deploymentMode: 'Validation'
 
-- task: PublishBuildArtifacts@1
+- task: AzureFileCopy@4
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    SourcePath: '.\*.json'
+    azureSubscription: 'MyConnection'
+    Destination: 'AzureBlob'
+    storage: 'dvdldeployment'
+    ContainerName: 'logicapp'
