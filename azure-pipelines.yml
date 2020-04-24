@@ -28,7 +28,7 @@ steps:
 
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: '.'
+    SourcePath: '.\*.json'
     azureSubscription: 'MyConnection'
     Destination: 'AzureBlob'
     storage: 'dvdldeployment'
