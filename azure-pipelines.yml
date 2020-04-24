@@ -20,6 +20,19 @@ steps:
     subscriptionId: 'b0a62e67-fe11-4a84-b57d-860652f00af3'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RG-LogicApp-Demo-Test'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://dvdldeployment.blob.core.windows.net/logicapp/apiconnection.json'
+    csmParametersFileLink: 'https://dvdldeployment.blob.core.windows.net/logicapp/apiconnection.parameters.json'
+    deploymentMode: 'Validation'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MyConnection'
+    subscriptionId: 'b0a62e67-fe11-4a84-b57d-860652f00af3'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'westeurope'
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
