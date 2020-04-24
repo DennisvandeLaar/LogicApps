@@ -33,4 +33,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'dvdldeployment'
     ContainerName: 'logicapp'
-    AdditionalArgumentsForBlobCopy: '--log-level=verbose'
