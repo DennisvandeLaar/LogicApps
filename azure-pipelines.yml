@@ -31,7 +31,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'westeurope'
-    templateLocation: 'Linked artifact'
+    templateLocation: 'URL of the file'
     csmFile: 'azuredeploy.json'
     csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Validation'
