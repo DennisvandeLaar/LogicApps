@@ -6,7 +6,7 @@
             "value": "servicebus"
         },
         "serviceBusConnectionString": {
-            "value": null
+            "value": ""
         }
     }
 }
