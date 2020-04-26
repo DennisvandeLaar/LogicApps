@@ -4,6 +4,9 @@
     "parameters": {
         "connections_servicebus_name": {
             "value": "servicebus"
+        },
+        "serviceBusConnectionString": {
+            "value": "Endpoint=sb://dvdltest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Yv0lDp7lgy+pefv0+3cPmec4csiYsba47rwYwEvaYJg="
         }
     }
 }
