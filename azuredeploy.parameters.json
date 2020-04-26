@@ -4,9 +4,6 @@
     "parameters": {
       "logicAppName": {
         "value": "MyLogicApp"
-      },
-      "connections_servicebus_name": {
-        "value": "servicebus"
       }
     }
 }
