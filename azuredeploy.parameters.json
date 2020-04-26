@@ -4,6 +4,12 @@
     "parameters": {
       "logicAppName": {
         "value": "MyLogicApp"
+      },
+      "serviceBusConnectionName": {
+        "value": "servicebus"
+      },
+      "serviceBusQueueName": {
+        "value": "input"
       }
     }
 }

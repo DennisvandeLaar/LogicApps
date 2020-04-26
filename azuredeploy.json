@@ -15,6 +15,19 @@
 				"description": "A test URI"
 			}
 		},
+		"serviceBusConnectionName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name for the Service Bus connection."
+            }
+		},
+		"serviceBusQueueName": {
+			"type": "string",
+			"defaultValue": "input",
+            "metadata": {
+                "description": "The name of the queue to add a message to."
+            }
+        },
 		"location": {
 			"type": "string",
 			"defaultValue": "[resourceGroup().location]",
@@ -48,7 +61,7 @@
 								}
 							},
 							"method": "post",
-							"path": "/@{encodeURIComponent(encodeURIComponent('input'))}/messages"
+							"path": "[concat('/@{encodeURIComponent(', variables('singleQuote'), parameters('serviceBusQueueName'), variables('singleQuote'), ')}/messages')]"
 						},
 						"runAfter": {},
 						"type": "ApiConnection"
@@ -95,9 +108,8 @@
 				"$connections": {
 					"value": {
 						"servicebus": {
-							"connectionId": "/subscriptions/b0a62e67-fe11-4a84-b57d-860652f00af3/resourceGroups/RG-LogicApp-Demo-Test/providers/Microsoft.Web/connections/servicebus",
-							"connectionName": "servicebus",
-							"id": "/subscriptions/b0a62e67-fe11-4a84-b57d-860652f00af3/providers/Microsoft.Web/locations/westeurope/managedApis/servicebus"
+							"id": "[subscriptionResourceId('Microsoft.Web/locations/managedApis', parameters('location'), 'servicebus')]",
+                            "connectionId": "[resourceId('Microsoft.Web/connections', parameters('serviceBusConnectionName'))]"
 						}
 					}
 				}
