@@ -10,7 +10,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -20,9 +19,9 @@ steps:
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFile: 'apiconnection.json'
+    csmFileLink: 'azuredeploy.api.json'
+    csmParametersFileLink: 'azuredeploy.api.parameters.json'
     deploymentMode: 'Validation'
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
