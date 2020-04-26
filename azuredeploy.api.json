@@ -16,6 +16,7 @@
             "location": "westeurope",
             "properties": {
                 "displayName": "[parameters('connections_servicebus_name')]",
+                "connectionString": "Endpoint=sb://dvdltest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Yv0lDp7lgy+pefv0+3cPmec4csiYsba47rwYwEvaYJg=",
                 "customParameterValues": {},
                 "api": {
                     "id": "[concat('/subscriptions/b0a62e67-fe11-4a84-b57d-860652f00af3/providers/Microsoft.Web/locations/westeurope/managedApis/', parameters('connections_servicebus_name'))]"
