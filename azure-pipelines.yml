@@ -17,11 +17,12 @@ steps:
     subscriptionId: 'b0a62e67-fe11-4a84-b57d-860652f00af3'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'RG-LogicApp-Demo-Test'
-    location: 'West Europe'
+    location: 'westeurope'
     templateLocation: 'URL of the file'
-    csmFileLink: 'azuredeploy.api.json'
-    csmParametersFileLink: 'azuredeploy.api.parameters.json'
+    csmFile: 'azuredeploy.api.json'
+    csmParametersFile: 'azuredeploy.api.parameters.json'
     deploymentMode: 'Validation'
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
