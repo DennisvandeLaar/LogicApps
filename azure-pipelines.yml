@@ -20,8 +20,8 @@ steps:
     resourceGroupName: 'RG-LogicApp-Demo-Test'
     location: 'westeurope'
     templateLocation: 'URL of the file'
-    csmFile: 'azuredeploy.api.json'
-    csmParametersFile: 'azuredeploy.api.parameters.json'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
     deploymentMode: 'Validation'
 
 - task: AzureFileCopy@4
