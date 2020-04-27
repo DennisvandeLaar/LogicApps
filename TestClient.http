@@ -1,4 +1,4 @@
-POST https://prod-34.westeurope.logic.azure.com:443/workflows/dcab4bf59fc74439b2bb65de97b8373a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iejhaMDW4uFc3MxTbsdqZqFs1D1xIDOlaNSplm8bnAw
+POST https://prod-45.westeurope.logic.azure.com:443/workflows/2853068befa14c2ebf4591724460b4c4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=obUm918A61tFNVBANWlBjE0-0A7C6VIemuYsMtRX_3s
 Content-Type: application/json
 
 {
@@ -9,11 +9,7 @@ Content-Type: application/json
     }
 }
 
-
-
-
-
-POST https://prod-22.westeurope.logic.azure.com:443/workflows/bdc54327887c4c3b98247f6f14f8a793/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=dVKFTJDSCGOISKbaAzkbxJywjHTBGc-2msUEF75YUR0
+POST https://prod-140.westeurope.logic.azure.com:443/workflows/9ddd5d1c6a7c4b769b4669a8b45b00b4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=VTHuzJf0r4g7qAs8MS30NtRZS2unT-t0UT_w35ZnKzU
 Content-Type: application/json
 
 {
@@ -23,3 +19,18 @@ Content-Type: application/json
         "Lastname": "is Test"
     }
 }
+
+POST https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/token
+Content-Type: application/json
+
+{
+    "grant_type": "client_credentials",
+    "client_id": "c8f94c87-933e-4e78-aa1e-3809f4b3675d",
+    "client_secret": "4i-.[Js7vBEB5dl?iFiyDQK0mgyytQxq",
+    "resource": "https://management.azure.com",
+}
+
+## ManagementDvdL
+
+
+PUT https://management.azure.com/subscriptions/b0a62e67-fe11-4a84-b57d-860652f00af3/providers/Microsoft.Web/locations/westeurope/managedApis/servicebus?api-version=2018–07–01-preview
