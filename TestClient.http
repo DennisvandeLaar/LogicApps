@@ -19,16 +19,3 @@ Content-Type: application/json
         "Lastname": "is Test"
     }
 }
-
-POST https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/oauth2/token
-Content-Type: application/json
-
-{
-    "grant_type": "client_credentials",
-    "client_id": "c8f94c87-933e-4e78-aa1e-3809f4b3675d",
-    "client_secret": "4i-.[Js7vBEB5dl?iFiyDQK0mgyytQxq",
-    "resource": "https://management.azure.com",
-}
-
-## ManagementDvdL
-PUT https://management.azure.com/subscriptions/b0a62e67-fe11-4a84-b57d-860652f00af3/providers/Microsoft.Web/locations/westeurope/managedApis/servicebus?api-version=2018–07–01-preview
