@@ -17,7 +17,7 @@
             "properties": {
                 "ownerId": "[resourceId('Microsoft.ApiManagement/service/users', parameters('ApimServiceName'), '1')]",
                 "scope": "[resourceId('Microsoft.ApiManagement/service/products', parameters('ApimServiceName'), 'unlimited')]",
-                "state": "Suspended",
+                "state": "Active",
                 "allowTracing": true,
                 "displayName": "[parameters('SubscriptionName')]"
             }
