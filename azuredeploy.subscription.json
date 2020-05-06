@@ -15,8 +15,8 @@
             "apiVersion": "2019-12-01",
             "name": "[concat(parameters('ApimServiceName'), '/5eafc2fa0f2ef30059070002')]",
             "properties": {
-                "ownerId": "[resourceId('Microsoft.ApiManagement/service/users', parameters('ApimServiceName'), '1')]",
-                "scope": "[resourceId('Microsoft.ApiManagement/service/products', parameters('ApimServiceName'), 'unlimited')]",
+                "ownerId": "[resourceId('Microsoft.ApiManagement/service/users', parameters('ApimServiceName'), '2')]",
+                "scope": "[resourceId('Microsoft.ApiManagement/service/apis', parameters('ApimServiceName'), '1')]",
                 "state": "Active",
                 "allowTracing": true,
                 "displayName": "[parameters('SubscriptionName')]"
