@@ -1,4 +1,4 @@
-POST https://prod-45.westeurope.logic.azure.com:443/workflows/2853068befa14c2ebf4591724460b4c4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=obUm918A61tFNVBANWlBjE0-0A7C6VIemuYsMtRX_3s
+POST https://prod-151.westeurope.logic.azure.com:443/workflows/c44a8a1afcea4974b887cbc1a8937185/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kFuaqRItvmK3VDbDYS4ok2whFbV1-CTkOc2fxftHfaY
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
     }
 }
 
-POST https://prod-140.westeurope.logic.azure.com:443/workflows/9ddd5d1c6a7c4b769b4669a8b45b00b4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=VTHuzJf0r4g7qAs8MS30NtRZS2unT-t0UT_w35ZnKzU
+POST https://prod-160.westeurope.logic.azure.com:443/workflows/708a95f2f5f14a2295e14b75a6ba681d/triggers/manual/paths/invoke?api-version=2019-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2NuMNF5XWD927CxOmLeJFgkgAtGCkNbKcJNvIa8CA00
 Content-Type: application/json
 
 {
@@ -19,3 +19,5 @@ Content-Type: application/json
         "Lastname": "is Test"
     }
 }
+
+PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}?api-version=2019-12-01
