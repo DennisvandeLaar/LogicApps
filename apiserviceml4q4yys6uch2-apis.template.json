@@ -19,7 +19,7 @@
         },
         "apiRevision": "1",
         "isCurrent": true,
-        "displayName": "Echo API V3",
+        "displayName": "Echo API V4",
         "serviceUrl": "http://echoapi.cloudapp.net/api",
         "path": "echo",
         "protocols": [
