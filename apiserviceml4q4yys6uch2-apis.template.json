@@ -1,10 +1,13 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "ApimServiceName": {
       "type": "string",
-      "defaultValue": "Demo"
+      "defaultValue": "DVDL-APIM-default
+
+
+"
     }
   },
   "resources": [
@@ -19,7 +22,7 @@
         },
         "apiRevision": "1",
         "isCurrent": true,
-        "displayName": "Echo API",
+        "displayName": "Echo API V2",
         "serviceUrl": "http://echoapi.cloudapp.net/api",
         "path": "echo",
         "protocols": [

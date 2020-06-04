@@ -9,15 +9,15 @@ Content-Type: application/json
     }
 }
 
-POST https://prod-160.westeurope.logic.azure.com:443/workflows/708a95f2f5f14a2295e14b75a6ba681d/triggers/manual/paths/invoke?api-version=2019-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2NuMNF5XWD927CxOmLeJFgkgAtGCkNbKcJNvIa8CA00
+POST https://prod-115.westeurope.logic.azure.com:443/workflows/00b89892d5e44e6790a7f4dd7d90e70c/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=p7VSnFJwSn75r1rBjG2isw0619FM5rtIkmINAAkstE8
 Content-Type: application/json
 
 {
     "Person":
     {
         "Firstname": "This ",
-        "Lastname": "is Test"
+        "Lastname": "is Test 3"
     }
 }
 
-PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}?api-version=2019-12-01
+GET https://dvdlfhir.azurehealthcareapis.com/metadata
