@@ -16,7 +16,7 @@ steps:
     azureResourceManagerConnection: 'MyConnection'
     subscriptionId: 'b0a62e67-fe11-4a84-b57d-860652f00af3'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'RG-APIM-Default'
+    resourceGroupName: 'RG-APIM-prod'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'apiserviceml4q4yys6uch2-apis.template.json'
