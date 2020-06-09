@@ -4,7 +4,7 @@
   "parameters": {
     "ApimServiceName": {
       "type": "string",
-      "defaultValue": "DVDL-APIM-default"
+      "defaultValue": "DVDL-APIM-test"
     }
   },
   "resources": [
